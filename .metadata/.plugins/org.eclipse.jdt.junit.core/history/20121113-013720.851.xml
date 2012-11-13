@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="CustomerProcessorTest" project="spring-batch-training" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="sopra.springbatch.training1.part2.item.processor.CustomerProcessorTest" time="0.0">
+    <testcase name="passThroughItemProcessor" classname="sopra.springbatch.training1.part2.item.processor.CustomerProcessorTest" time="0.0"/>
+    <testcase name="validatingItemProcessor" classname="sopra.springbatch.training1.part2.item.processor.CustomerProcessorTest" time="0.0"/>
+    <testcase name="itemProcessorAdapterTest" classname="sopra.springbatch.training1.part2.item.processor.CustomerProcessorTest" time="0.0"/>
+    <testcase name="compositeItemProcessorTest" classname="sopra.springbatch.training1.part2.item.processor.CustomerProcessorTest" time="0.0"/>
+  </testsuite>
+</testrun>

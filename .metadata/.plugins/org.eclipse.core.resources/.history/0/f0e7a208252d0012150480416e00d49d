@@ -1,0 +1,8 @@
+package sopra.springbatch.training1.part2.item.processor;
+
+/**
+ * Processor pour CustomerDTO
+ */
+public class CustomerProcessor {
+
+}

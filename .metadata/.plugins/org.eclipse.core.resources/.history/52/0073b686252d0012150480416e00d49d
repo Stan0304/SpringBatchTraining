@@ -1,0 +1,27 @@
+package sopra.springbatch.training1.part2.item.processor;
+
+import org.springframework.batch.item.ItemProcessor;
+
+import sopra.springbatch.training1.dto.CustomerDTO;
+
+/**
+ * Processor pour CustomerDTO<br />
+ * Implémentations existantes :
+ * <ul>
+ * <li>org.springframework.batch.item.support.CompositeProcessor</li>
+ * <li>ItemProcessorAdapter</li>
+ * <li>PassThroughItemProcessor</li>
+ * <li>UserMailItemProcessor</li>
+ * <li>UserMailItemProcessor</li>
+ * <li>ValidatingItemProcessor</li>
+ * </ul>
+ */
+public class CustomerProcessor implements ItemProcessor<CustomerDTO, CustomerDTO> {
+
+	@Override
+	public CustomerDTO process(CustomerDTO customerDTO) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

@@ -1,0 +1,20 @@
+RECORD1
+Name,fcustomer1,lcustomer1
+Age,10
+Gender,M
+RECORD1
+
+RECORD2
+fcustomer2          lcustomer2          20   F
+RECORD2
+
+RECORD3
+fcustomer3
+lcustomer3
+30
+F
+RECORD3
+
+RECORD4
+fcustomer4          lcustomer4          40   M
+RECORD5

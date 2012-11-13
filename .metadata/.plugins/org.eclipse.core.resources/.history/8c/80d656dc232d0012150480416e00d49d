@@ -1,0 +1,104 @@
+package sopra.springbatch.training1.part1.item.reader;
+
+import org.springframework.batch.item.ExecutionContext;
+import org.springframework.batch.item.ItemReader;
+import org.springframework.batch.item.ItemStream;
+import org.springframework.batch.item.ItemStreamException;
+import org.springframework.batch.item.NonTransientResourceException;
+import org.springframework.batch.item.ParseException;
+import org.springframework.batch.item.UnexpectedInputException;
+import org.springframework.batch.item.file.FlatFileItemReader;
+import org.springframework.batch.item.file.mapping.DefaultLineMapper;
+import org.springframework.batch.item.file.mapping.PassThroughFieldSetMapper;
+import org.springframework.batch.item.file.transform.DelimitedLineTokenizer;
+import org.springframework.batch.item.file.transform.FieldSet;
+import org.springframework.core.io.Resource;
+import org.springframework.util.Assert;
+
+import sopra.springbatch.training1.dto.CustomerDTO;
+
+/**
+ * Lecture multiligne
+ */
+public class MultiLineReader implements ItemReader<CustomerDTO>, ItemStream  {
+
+	/** Lecture déléguée à FlatFileItemReader */
+	private FlatFileItemReader<FieldSet> delegate;
+	
+	/** Ressource à lire */
+	private Resource resource;
+	
+	/** Méthode permetant l'initialisation du lecteur */
+	public void init() {
+		delegate = new FlatFileItemReader<FieldSet>();
+		// passage de la ressource au reader
+		delegate.setResource(resource);
+		DefaultLineMapper<FieldSet> defaultLineMapper = new DefaultLineMapper<FieldSet>();
+		// délimiter par défaut
+		defaultLineMapper.setLineTokenizer(new DelimitedLineTokenizer());
+		//fieldMapper par défaut
+		defaultLineMapper.setFieldSetMapper(new PassThroughFieldSetMapper());
+		delegate.setLineMapper(defaultLineMapper);
+		
+	}
+	
+	@Override
+	public CustomerDTO read() throws Exception, UnexpectedInputException,
+			ParseException, NonTransientResourceException {
+		CustomerDTO customerDTO = null;
+		
+		// boucle sur les lignes du fichier
+		for (FieldSet ligne = delegate.read() ; 
+				ligne != null ;
+				ligne = delegate.read()) {
+			String prefix = ligne.readString(0);
+			
+			if (prefix.equals("BEGIN")) {
+				customerDTO = new CustomerDTO();
+			} 
+			else if (prefix.equals("NAME")) {
+				Assert.notNull(customerDTO, "No 'BEGIN' was found.");
+				customerDTO.setFirstName(ligne.readString(1));
+				customerDTO.setLastName(ligne.readString(2));
+			} 
+			else if (prefix.equals("AGE")) {
+				Assert.notNull(customerDTO, "No 'BEGIN' was found.");
+				customerDTO.setAge(ligne.readInt(1));
+			} 
+			else if (prefix.equals("GENDER")) {
+				Assert.notNull(customerDTO, "No 'BEGIN' was found.");
+				customerDTO.setGender(ligne.readChar(1));
+			}
+			else if (prefix.equals("END")) {
+				return customerDTO;
+			} 
+		}		
+		Assert.notNull(customerDTO, "No 'END' was found.");
+		
+		return null;	
+	}
+	
+	@Override
+	public void close() throws ItemStreamException {
+		delegate.close();		
+	}
+
+	@Override
+	public void open(ExecutionContext executionContext) throws ItemStreamException {
+		delegate.open(executionContext);
+	}
+
+	@Override
+	public void update(ExecutionContext executionContext) throws ItemStreamException {
+		delegate.update(executionContext);	
+	}
+
+	/**
+	 * Set the ressource
+	 * @param resource the ressource to set
+	 */
+	public void setResource(Resource resource) {
+		this.resource = resource;
+	}
+
+}

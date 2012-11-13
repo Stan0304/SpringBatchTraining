@@ -5,7 +5,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
- * Test la lecture de fichier plat
+ * Test la lecture de fichier plat avec champs à taille fixe
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration

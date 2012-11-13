@@ -1,0 +1,11 @@
+package sopra.springbatch.training1.part2.adapter;
+
+import sopra.springbatch.training1.dto.CustomerDTO;
+
+public class CustomerMapper  {
+	public CustomerDTO map(CustomerDTO customerDTO){
+		CustomerDTO customerDTOOut = new CustomerDTO()
+		
+		return customerDTO;
+	}
+}

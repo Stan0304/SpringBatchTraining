@@ -5,7 +5,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
- * Test la lecture de fichier plat
+ * Test la lecture de fichier plat délimité par séparteur ;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration

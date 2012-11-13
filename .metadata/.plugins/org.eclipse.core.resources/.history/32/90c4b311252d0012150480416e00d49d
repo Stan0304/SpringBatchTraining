@@ -1,0 +1,10 @@
+package sopra.springbatch.training1.part2.item.processor;
+
+import org.springframework.batch.item.ItemProcessor;
+
+/**
+ * Processor pour CustomerDTO
+ */
+public class CustomerProcessor implements ItemProcessor<I, O> {
+
+}

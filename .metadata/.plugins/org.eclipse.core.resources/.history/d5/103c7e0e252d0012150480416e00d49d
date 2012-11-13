@@ -1,0 +1,10 @@
+package sopra.springbatch.training1.part2.item.processor;
+
+import javax.annotation.processing.Processor;
+
+/**
+ * Processor pour CustomerDTO
+ */
+public class CustomerProcessor implements Processor {
+
+}

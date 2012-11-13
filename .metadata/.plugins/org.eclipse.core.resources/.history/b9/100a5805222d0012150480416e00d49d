@@ -1,0 +1,53 @@
+package sopra.springbatch.training1.part1.item.reader;
+
+import org.springframework.batch.item.ExecutionContext;
+import org.springframework.batch.item.ItemReader;
+import org.springframework.batch.item.ItemStream;
+import org.springframework.batch.item.ItemStreamException;
+import org.springframework.batch.item.NonTransientResourceException;
+import org.springframework.batch.item.ParseException;
+import org.springframework.batch.item.UnexpectedInputException;
+import org.springframework.batch.item.file.FlatFileItemReader;
+import org.springframework.batch.item.file.transform.FieldSet;
+
+import sopra.springbatch.training1.dto.CustomerDTO;
+
+/**
+ * Lecture multiligne
+ */
+public class MultiLineReader implements ItemReader<CustomerDTO>, ItemStream  {
+
+	/** Lecture déléguée à FlatFileItemReader */
+	private FlatFileItemReader<FieldSet> delegate;
+	
+	@Override
+	public CustomerDTO read() throws Exception, UnexpectedInputException,
+			ParseException, NonTransientResourceException {
+		CustomerDTO customerDTO = null;
+		
+		for (FieldSet ligne = delegate.read() ; 
+				ligne != null ;
+				ligne = delegate.read()){
+			if ()
+		}
+		
+		
+		return null;	
+	}
+	
+	@Override
+	public void close() throws ItemStreamException {
+		delegate.close();		
+	}
+
+	@Override
+	public void open(ExecutionContext executionContext) throws ItemStreamException {
+		delegate.open(executionContext);
+	}
+
+	@Override
+	public void update(ExecutionContext executionContext) throws ItemStreamException {
+		delegate.update(executionContext)		
+	}
+
+}

@@ -1,0 +1,7 @@
+package sopra.springbatch.training1.part2.adapter;
+
+import com.thoughtworks.xstream.mapper.Mapper;
+
+public class CustomerMapper implements Mapper {
+
+}

@@ -1,0 +1,39 @@
+package sopra.springbatch.training1.part2.item.processor;
+
+import java.util.List;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.batch.item.ItemProcessor;
+import org.springframework.batch.item.adapter.ItemProcessorAdapter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import sopra.springbatch.training1.dto.CustomerDTO;
+import sopra.springbatch.training1.part1.item.reader.ReaderTestHelper;
+
+
+/**
+ * Implémentations existantes de Processor (cf. CustomerProcessorTest-context.xml) :
+ * <ul>
+ * <li>org.springframework.batch.item.adapter.ItemProcessorAdapter</li>
+ * <li>org.springframework.batch.item.support.CompositeItemProcessor</li>
+ * <li>org.springframework.batch.item.support.PassThroughItemProcessor</li>
+ * <li>org.springframework.batch.item.validator.ValidatingItemProcessor</li>
+ * </ul>
+ */
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration
+public class CustomerProcessorTest {
+	/** Liste de customer expected du reader */
+	private List<CustomerDTO> readerExpected = new ReaderTestHelper().getExpected(); 
+	
+	@Autowired
+	ItemProcessorAdapter<CustomerDTO,CustomerDTO> itemProcessorAdapter;
+	
+	@Test
+	public void itemProcessorAdapterTest(){
+		
+	}
+}

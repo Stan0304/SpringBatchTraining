@@ -1,0 +1,22 @@
+package sopra.springbatch.training1.part1.item.reader;
+
+import org.springframework.batch.item.file.FlatFileItemReader;
+
+import sopra.springbatch.training1.dto.CustomerDTO;
+
+/**
+ * Lecture multiligne
+ */
+public class MultiLineReader extends FlatFileItemReader<CustomerDTO> {
+
+	/**
+	 * Surcharge de la méthode de FlatFileItemReader 
+	 */
+	@Override
+	protected CustomerDTO doRead() throws Exception {
+		CustomerDTO customerDTO;
+		
+		
+		return super.doRead();
+	}
+}
