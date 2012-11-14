@@ -1,5 +1,0 @@
-package sopra.springbatch.training1.part1.item.reader;
-
-public class MultiLineReader {
-
-}

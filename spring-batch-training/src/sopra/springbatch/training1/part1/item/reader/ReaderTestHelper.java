@@ -21,7 +21,7 @@ public class ReaderTestHelper {
 	@Autowired
 	ItemStreamReader<CustomerDTO> itemReader;
 	
-	private static Logger LOGGER = Logger.getLogger(FileItemFixedLengthReaderTest.class); 
+	private static Logger LOGGER = Logger.getLogger(ReaderTestHelper.class); 
 	
 	@Test
 	public void testRead() throws UnexpectedInputException, ParseException, NonTransientResourceException, Exception {

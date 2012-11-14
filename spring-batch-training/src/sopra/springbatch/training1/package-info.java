@@ -1,7 +1,9 @@
 /**
- * Ce pacakge contient les sources du premier exercice mettant en oeuvre :
+ * Ce package présente le framework spring-batch pour un cas simple :
  * <ul>
- * 	<li>La lecture d'un fichier plat en utilisant FlatItemReader</li>
+ * <li>Part 1 : Reader</li>
+ * <li>Part 2 : Processor</li>
+ * <li>Part 3 : Writer</li>
  * </ul>
  */
 package sopra.springbatch.training1;

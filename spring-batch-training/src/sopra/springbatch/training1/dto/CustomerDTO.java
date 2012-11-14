@@ -1,9 +1,22 @@
 package sopra.springbatch.training1.dto;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Version;
+
 /**
  * Bean Java customer manipulé
  */
+@Entity
+@Table(name = "CUSTOMER")
 public class CustomerDTO {
+	@Id
+	/** Id de la ligne en base */
+	private Integer id;
+	@Version
+	/** Version de l'objet */
+	private Integer version;
 	/** Prénom */
 	private String firstName;
 	/** Nom */
@@ -12,6 +25,30 @@ public class CustomerDTO {
 	private Integer age;
 	/** Sexe */
 	private Character gender;
+	/**
+	 * @return the id
+	 */
+	public Integer getId() {
+		return id;
+	}
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	/**
+	 * @return the version
+	 */
+	public Integer getVersion() {
+		return version;
+	}
+	/**
+	 * @param version the version to set
+	 */
+	public void setVersion(Integer version) {
+		this.version = version;
+	}
 	/**
 	 * @return the firstName
 	 */
@@ -60,12 +97,13 @@ public class CustomerDTO {
 	public void setGender(Character gender) {
 		this.gender = gender;
 	}
-	/**
+	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
-		return "CustomerDTO [firstName=" + firstName + ", lastName=" + lastName
+		return "CustomerDTO [id=" + id + ", version=" + version
+				+ ", firstName=" + firstName + ", lastName=" + lastName
 				+ ", age=" + age + ", gender=" + gender + "]";
 	}
 	/* (non-Javadoc)
@@ -75,7 +113,7 @@ public class CustomerDTO {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + age;
+		result = prime * result + ((age == null) ? 0 : age.hashCode());
 		result = prime * result
 				+ ((firstName == null) ? 0 : firstName.hashCode());
 		result = prime * result + ((gender == null) ? 0 : gender.hashCode());
@@ -95,7 +133,10 @@ public class CustomerDTO {
 		if (getClass() != obj.getClass())
 			return false;
 		CustomerDTO other = (CustomerDTO) obj;
-		if (age != other.age)
+		if (age == null) {
+			if (other.age != null)
+				return false;
+		} else if (!age.equals(other.age))
 			return false;
 		if (firstName == null) {
 			if (other.firstName != null)

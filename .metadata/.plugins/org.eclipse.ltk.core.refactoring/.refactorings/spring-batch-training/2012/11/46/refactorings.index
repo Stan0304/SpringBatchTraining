@@ -12,3 +12,17 @@
 1352765783986	Rename type 'CustomerMapper'
 1352767155984	Rename local variable 'customerDTO5'
 1352767182132	Rename local variable 'customerDTO6'
+1352849831287	Copy file
+1352851396998	Delete elements
+1352851534380	Rename resource 'JdbcItemReaderTestTest-context.xml'
+1352852969809	Copy file
+1352853088482	Copy compilation unit
+1352853374060	Rename resource 'CustomerCredit.hbm.xml'
+1352853572014	Copy compilation unit
+1352854212480	Copy elements
+1352854245455	Copy compilation unit
+1352854259239	Rename type 'ProcessorHelperTest'
+1352854402997	Copy elements
+1352854483001	Copy elements
+1352854647912	Rename resource 'CustomerProcessorTest-context.xml'
+1352854657176	Rename type 'CustomerProcessorTest'
