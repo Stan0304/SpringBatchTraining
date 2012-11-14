@@ -1,0 +1,4 @@
+/**
+ * Ce package présente le framework spring-batch pour un cas simple 
+ */
+package sopra.springbatch.training1;

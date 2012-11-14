@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+<!--  Initialise the database before every test case: -->
+	<bean id="dataSourceInitializer" class="org.springframework.batch.test.DataSourceInitializer">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="initScripts">
+			<list>
+				<value>classpath:/sopra/springbatch/training1/part1-hsqldb.sql</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="itemReader" class="org.springframework.batch.item.database.JdbcCursorItemReader">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="sql" value="select ID, VERSION, FIRSTNAME, LASTNAME, AGE, GENDER from CUSTOMER"/>
+		<property name="verifyCursorPosition" value="true"/>
+		<property name="rowMapper">
+			<bean class="sopra.springbatch.training1.part1.item.reader.CustomerRowMapper"/>
+		</property>
+	</bean>
+	
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="org.hsqldb.jdbcDriver" />
+		<property name="url" value="jdbc:hsqldb:mem:testdb;sql.enforce_strict_size=true" />
+		<property name="username" value="sa" />
+		<property name="password" value="" />
+		<property name="maxActive" value="6"/><!--  jdbc pool size -->
+		<property name="validationQuery" value=""/>
+		<property name="testWhileIdle" value="false"/>
+	</bean>
+
+	
+</beans>

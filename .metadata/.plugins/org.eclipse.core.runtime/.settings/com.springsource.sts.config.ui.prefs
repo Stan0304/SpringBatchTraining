@@ -1,0 +1,17 @@
+//com.springsource.config.ui.prefs.activePageIndex\:/spring-batch-samples/src/main/resources/data-source-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/spring-batch-samples/src/main/resources/jobs/iosample/jdbcCursor.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/spring-batch-samples/src/main/resources/jobs/iosample/jpa.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/spring-batch-samples/src/main/resources/jobs/iosample/multiLine.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/spring-batch-samples/src/main/resources/org/springframework/batch/sample/config/common-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/spring-batch-samples/src/main/resources/quartz-job-launcher-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/spring-batch-samples/src/main/resources/simple-job-launcher-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/spring-batch-training/src/sopra/springbatch/training1/part1/item/reader/JdbcItemReaderTest-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/spring-batch-training/src/sopra/springbatch/training1/part1/item/reader/JdbcItemReaderTestTest-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/spring-batch-training/src/sopra/springbatch/training1/part1/item/reader/JpaItemReaderTest-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/spring-batch-training/src/sopra/springbatch/training1/part1/item/reader/MultiLineReaderTest-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/spring-batch-training/src/sopra/springbatch/training1/part2/item/processor/CompositeProcessorTest-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/spring-batch-training/src/sopra/springbatch/training1/part2/item/processor/CustomerProcessorTest-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/spring-batch-training/src/sopra/springbatch/training1/part2/item/processor/PassThroughItemProcessorTest-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/spring-batch-training/src/sopra/springbatch/training1/part2/item/processor/ProcessorAdapterTest-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/spring-batch-training/src/sopra/springbatch/training1/part2/item/processor/ValidatingItemProcessorTest-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+eclipse.preferences.version=1

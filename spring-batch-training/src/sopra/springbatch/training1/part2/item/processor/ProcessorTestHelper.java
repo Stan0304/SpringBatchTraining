@@ -1,0 +1,44 @@
+package sopra.springbatch.training1.part2.item.processor;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import junit.framework.Assert;
+
+import org.junit.Test;
+import org.springframework.batch.item.ItemProcessor;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import sopra.springbatch.training1.dto.CustomerDTO;
+import sopra.springbatch.training1.part1.item.reader.ReaderTestHelper;
+
+
+/**
+ * Implémentations existantes de Processor (cf. CustomerProcessorTest-context.xml) :
+ * <ul>
+ * <li>org.springframework.batch.item.adapter.ItemProcessorAdapter</li>
+ * <li>org.springframework.batch.item.support.CompositeItemProcessor</li>
+ * <li>org.springframework.batch.item.support.PassThroughItemProcessor</li>
+ * <li>org.springframework.batch.item.validator.ValidatingItemProcessor</li>
+ * </ul>
+ */
+public class ProcessorTestHelper {
+	/** Liste de customer expected du reader */
+	private List<CustomerDTO> readerExpected = new ReaderTestHelper().getExpected(); 
+	
+	// TEST >> ItemProcessorAdapter
+	@Autowired
+	ItemProcessor<CustomerDTO,CustomerDTO> itemProcessor;
+	@Test
+	public void itemProcessorAdapterTest() throws Exception{
+		List<CustomerDTO> actual = new ArrayList<CustomerDTO>();
+		
+		// boucle sur les customers pour lancer le processor
+		for (CustomerDTO customerDTO : readerExpected) {
+			actual.add(itemProcessor.process(customerDTO));
+		}
+		
+		Assert.assertEquals(readerExpected, actual);
+	}
+
+}

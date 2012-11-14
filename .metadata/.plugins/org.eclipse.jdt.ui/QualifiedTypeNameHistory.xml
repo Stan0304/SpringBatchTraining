@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.springframework.batch.item.ItemReader"/>
+<fullyQualifiedTypeName name="org.springframework.batch.item.ItemStream"/>
+<fullyQualifiedTypeName name="org.springframework.batch.item.file.transform.FieldSet"/>
+<fullyQualifiedTypeName name="org.springframework.batch.item.file.mapping.DefaultLineMapper"/>
+<fullyQualifiedTypeName name="org.springframework.batch.item.file.transform.LineTokenizer"/>
+<fullyQualifiedTypeName name="org.springframework.batch.item.file.transform.DelimitedLineTokenizer"/>
+<fullyQualifiedTypeName name="org.springframework.batch.item.file.mapping.PassThroughFieldSetMapper"/>
+<fullyQualifiedTypeName name="org.springframework.batch.item.file.FlatFileItemReader"/>
+<fullyQualifiedTypeName name="org.springframework.core.io.Resource"/>
+<fullyQualifiedTypeName name="org.springframework.batch.item.ItemStreamReader"/>
+<fullyQualifiedTypeName name="com.thoughtworks.xstream.mapper.Mapper"/>
+<fullyQualifiedTypeName name="javax.annotation.processing.Processor"/>
+<fullyQualifiedTypeName name="sopra.springbatch.training1.part1.item.reader.ReaderTestHelper"/>
+<fullyQualifiedTypeName name="org.springframework.batch.item.adapter.ItemProcessorAdapter"/>
+<fullyQualifiedTypeName name="org.springframework.batch.item.support.PassThroughItemProcessor"/>
+<fullyQualifiedTypeName name="org.springframework.batch.item.validator.ValidatingItemProcessor"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.hibernate.mapping.Array"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="junit.framework.Assert"/>
+<fullyQualifiedTypeName name="org.springframework.batch.item.validator.ValidationException"/>
+<fullyQualifiedTypeName name="org.springframework.jdbc.core.RowMapper"/>
+<fullyQualifiedTypeName name="antlr.StringUtils"/>
+<fullyQualifiedTypeName name="org.springframework.util.StringUtils"/>
+<fullyQualifiedTypeName name="org.apache.commons.lang.StringUtils"/>
+<fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="org.springframework.batch.item.database.JdbcCursorItemReader"/>
+<fullyQualifiedTypeName name="sopra.springbatch.training1.dto.CustomerDTO"/>
+<fullyQualifiedTypeName name="org.springframework.batch.item.ExecutionContext"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="org.springframework.batch.test.DataSourceInitializer"/>
+<fullyQualifiedTypeName name="org.junit.Before"/>
+<fullyQualifiedTypeName name="javax.persistence.Id"/>
+<fullyQualifiedTypeName name="javax.persistence.Version"/>
+<fullyQualifiedTypeName name="org.springframework.batch.core.ExitStatus"/>
+<fullyQualifiedTypeName name="org.springframework.batch.item.ItemProcessor"/>
+<fullyQualifiedTypeName name="org.hibernate.cache.ReadWriteCache.Item"/>
+<fullyQualifiedTypeName name="sopra.springbatch.training1.part2.item.processor.ProcessorTestHelper"/>
+</qualifiedTypeNameHistroy>

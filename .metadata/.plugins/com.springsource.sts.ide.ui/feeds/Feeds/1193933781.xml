@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>SpringSource Team Blog</title>
+	<atom:link href="http://blog.springsource.org/feed/" rel="self" type="application/rss+xml" />
+	<link>http://blog.springsource.org</link>
+	<description>The voice of SpringSource</description>
+	<lastBuildDate>Mon, 12 Nov 2012 14:13:37 +0000</lastBuildDate>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.1.1</generator>
+		<item>
+		<title>Spring Framework 3.2 RC1: Spring MVC Test Framework</title>
+		<link>http://blog.springsource.org/2012/11/12/spring-framework-3-2-rc1-spring-mvc-test-framework/</link>
+		<comments>http://blog.springsource.org/2012/11/12/spring-framework-3-2-rc1-spring-mvc-test-framework/#comments</comments>
+		<pubDate>Mon, 12 Nov 2012 14:13:37 +0000</pubDate>
+		<dc:creator>Rossen Stoyanchev</dc:creator>
+				<category><![CDATA[Spring]]></category>
+		<category><![CDATA[Testing]]></category>
+		<category><![CDATA[Web]]></category>
+
+		<guid isPermaLink="false">http://blog.springsource.org/?p=12053</guid>
+		<description><![CDATA[Last week Juergen Hoeller announced the release of Spring Framework 3.2 RC1 and Sam Brannen discussed exciting additions in its spring-test module such as support for WebApplicationContext&#039;s and upcoming plans for loading a hierarchy of contexts. Today I will continue this subject and describe another exciting spring-test addition. In 3.2 RC1 we&#039;ve added first class  <a href="http://blog.springsource.org/2012/11/12/spring-framework-3-2-rc1-spring-mvc-test-framework/"><em>Read more...</em></a>]]></description>
+		<wfw:commentRss>http://blog.springsource.org/2012/11/12/spring-framework-3-2-rc1-spring-mvc-test-framework/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+		<item>
+		<title>Spring Framework 3.2 RC1: New Testing Features</title>
+		<link>http://blog.springsource.org/2012/11/07/spring-framework-3-2-rc1-new-testing-features/</link>
+		<comments>http://blog.springsource.org/2012/11/07/spring-framework-3-2-rc1-new-testing-features/#comments</comments>
+		<pubDate>Wed, 07 Nov 2012 17:23:18 +0000</pubDate>
+		<dc:creator>Sam Brannen</dc:creator>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[Spring]]></category>
+		<category><![CDATA[Testing]]></category>
+		<category><![CDATA[Web]]></category>
+
+		<guid isPermaLink="false">http://blog.springsource.org/?p=12024</guid>
+		<description><![CDATA[As Juergen Hoeller mentioned in his post announcing the release of Spring Framework 3.2 RC1, the Spring Team has introduced some exciting new features in terms of testing support. Most importantly, we&#039;ve added first-class support for testing web applications. [1] &#160;&#160;&#160;&#160;&#160;&#160;Please note: this is a cross post from my Swiftmind company blog. In this post  <a href="http://blog.springsource.org/2012/11/07/spring-framework-3-2-rc1-new-testing-features/"><em>Read more...</em></a>]]></description>
+		<wfw:commentRss>http://blog.springsource.org/2012/11/07/spring-framework-3-2-rc1-new-testing-features/feed/</wfw:commentRss>
+		<slash:comments>4</slash:comments>
+		</item>
+		<item>
+		<title>A Groovy DSL For Spring Integration</title>
+		<link>http://blog.springsource.org/2012/11/06/a-groovy-dsl-for-spring-integration/</link>
+		<comments>http://blog.springsource.org/2012/11/06/a-groovy-dsl-for-spring-integration/#comments</comments>
+		<pubDate>Tue, 06 Nov 2012 23:25:22 +0000</pubDate>
+		<dc:creator>David Turanski</dc:creator>
+				<category><![CDATA[Groovy/Grails]]></category>
+		<category><![CDATA[Java]]></category>
+		<category><![CDATA[Spring]]></category>
+		<category><![CDATA[Spring Integration]]></category>
+
+		<guid isPermaLink="false">http://blog.springsource.org/?p=11908</guid>
+		<description><![CDATA[Spring Integration implements Enterprise Integration Patterrns using the Spring programming model to enable messaging in Spring-based applications. Spring Integration also provides integration with external systems using declarative adapters supporting jms, http, amqp, tcp, ftp(s), smtp, and so on. Currently, configuring message flows is primarily done via Spring XML and Spring Integration supports several namespaces to  <a href="http://blog.springsource.org/2012/11/06/a-groovy-dsl-for-spring-integration/"><em>Read more...</em></a>]]></description>
+		<wfw:commentRss>http://blog.springsource.org/2012/11/06/a-groovy-dsl-for-spring-integration/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>Spring Framework 3.2 RC1 released</title>
+		<link>http://blog.springsource.org/2012/11/05/spring-framework-3-2-rc1-released/</link>
+		<comments>http://blog.springsource.org/2012/11/05/spring-framework-3-2-rc1-released/#comments</comments>
+		<pubDate>Mon, 05 Nov 2012 14:50:00 +0000</pubDate>
+		<dc:creator>Juergen Hoeller</dc:creator>
+				<category><![CDATA[Java]]></category>
+		<category><![CDATA[Spring]]></category>
+
+		<guid isPermaLink="false">http://blog.springsource.org/?p=11994</guid>
+		<description><![CDATA[Dear Spring community, I&#039;m pleased to announce that the first Spring Framework 3.2 release candidate is now available. This generation of the core framework is a straightforward next step after last year&#039;s Spring Framework 3.1, continuing several well-established themes. Key features in Spring Framework 3.2 include: * A new Gradle-based framework build, making it easier  <a href="http://blog.springsource.org/2012/11/05/spring-framework-3-2-rc1-released/"><em>Read more...</em></a>]]></description>
+		<wfw:commentRss>http://blog.springsource.org/2012/11/05/spring-framework-3-2-rc1-released/feed/</wfw:commentRss>
+		<slash:comments>7</slash:comments>
+		</item>
+		<item>
+		<title>Spring MVC: from JSP and Tiles to Thymeleaf</title>
+		<link>http://blog.springsource.org/2012/10/30/spring-mvc-from-jsp-and-tiles-to-thymeleaf/</link>
+		<comments>http://blog.springsource.org/2012/10/30/spring-mvc-from-jsp-and-tiles-to-thymeleaf/#comments</comments>
+		<pubDate>Tue, 30 Oct 2012 09:58:50 +0000</pubDate>
+		<dc:creator>Michael Isvy</dc:creator>
+				<category><![CDATA[Spring]]></category>
+		<category><![CDATA[Web]]></category>
+
+		<guid isPermaLink="false">http://blog.springsource.org/?p=11858</guid>
+		<description><![CDATA[When it comes to the view layer, Spring @MVC gives you a variety of choices. In this article, we will first discuss the way you have most likely used the view layer in the past few years: JSP. We will see the bad and better ways to work with them (plain JSP, JSP with custom  <a href="http://blog.springsource.org/2012/10/30/spring-mvc-from-jsp-and-tiles-to-thymeleaf/"><em>Read more...</em></a>]]></description>
+		<wfw:commentRss>http://blog.springsource.org/2012/10/30/spring-mvc-from-jsp-and-tiles-to-thymeleaf/feed/</wfw:commentRss>
+		<slash:comments>35</slash:comments>
+		</item>
+		<item>
+		<title>Spring Data release train arrived</title>
+		<link>http://blog.springsource.org/2012/10/15/spring-data-release-train-arrived/</link>
+		<comments>http://blog.springsource.org/2012/10/15/spring-data-release-train-arrived/#comments</comments>
+		<pubDate>Mon, 15 Oct 2012 21:03:37 +0000</pubDate>
+		<dc:creator>Oliver Gierke</dc:creator>
+				<category><![CDATA[Data Access]]></category>
+		<category><![CDATA[Java]]></category>
+		<category><![CDATA[Spring Data]]></category>
+		<category><![CDATA[data access]]></category>
+		<category><![CDATA[NOSQL]]></category>
+
+		<guid isPermaLink="false">http://blog.springsource.org/?p=11838</guid>
+		<description><![CDATA[It&#039;s a pleasure to announce that we have just released the GA versions of a variety of Spring Data modules. With this release we continue to manifest the commitment of SpringSource to provide Java developers with tools to work with state-of-the-art persistence technologies. In this blog post I&#039;d like to give you detailed insight into  <a href="http://blog.springsource.org/2012/10/15/spring-data-release-train-arrived/"><em>Read more...</em></a>]]></description>
+		<wfw:commentRss>http://blog.springsource.org/2012/10/15/spring-data-release-train-arrived/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+		</item>
+		<item>
+		<title>Scripted: A JavaScript editor from VMware</title>
+		<link>http://blog.springsource.org/2012/10/11/scripted-a-javascript-editor-from-vmware/</link>
+		<comments>http://blog.springsource.org/2012/10/11/scripted-a-javascript-editor-from-vmware/#comments</comments>
+		<pubDate>Thu, 11 Oct 2012 15:17:14 +0000</pubDate>
+		<dc:creator>aclement</dc:creator>
+				<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Tools]]></category>
+		<category><![CDATA[JavaScript]]></category>
+
+		<guid isPermaLink="false">http://blog.springsource.org/?p=11757</guid>
+		<description><![CDATA[The first version of the Scripted code editor has been released this week on github: https://github.com/scripted-editor/scripted. Although Scripted is a general purpose code editor, the initial focus is building a great JavaScript editing experience. Scripted itself is built entirely in JavaScript and HTML/CSS. It is a browser-based editor that runs locally on a developer&#039;s machine  <a href="http://blog.springsource.org/2012/10/11/scripted-a-javascript-editor-from-vmware/"><em>Read more...</em></a>]]></description>
+		<wfw:commentRss>http://blog.springsource.org/2012/10/11/scripted-a-javascript-editor-from-vmware/feed/</wfw:commentRss>
+		<slash:comments>38</slash:comments>
+<enclosure url="http://dist.springsource.org/release/SCRIPTED/Scripted2.mov" length="37812131" type="video/quicktime" />
+		</item>
+		<item>
+		<title>What&#039;s New in Spring Integration 2.2 (Part 4 &#8211; Retry and More)</title>
+		<link>http://blog.springsource.org/2012/10/09/spring-integration-2-2-retry-and-more/</link>
+		<comments>http://blog.springsource.org/2012/10/09/spring-integration-2-2-retry-and-more/#comments</comments>
+		<pubDate>Tue, 09 Oct 2012 18:35:57 +0000</pubDate>
+		<dc:creator>Gary Russell</dc:creator>
+				<category><![CDATA[Spring]]></category>
+		<category><![CDATA[Spring Integration]]></category>
+
+		<guid isPermaLink="false">http://blog.springsource.org/?p=11360</guid>
+		<description><![CDATA[Introduction This is the fourth part in a series of blog posts highlighting some of the new features available in Spring Integration 2.2 following the recent release of Release Candidate 1. The first part talks about the MongoDB adapters, the second part talks about transaction synchronization; the third part talks about JPA support. Spring Integration  <a href="http://blog.springsource.org/2012/10/09/spring-integration-2-2-retry-and-more/"><em>Read more...</em></a>]]></description>
+		<wfw:commentRss>http://blog.springsource.org/2012/10/09/spring-integration-2-2-retry-and-more/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>What&#039;s New in Spring Integration 2.2 (Part 3 – JPA Support)</title>
+		<link>http://blog.springsource.org/2012/10/05/whats-new-in-spring-integration-2-2-part-3-jpa-support/</link>
+		<comments>http://blog.springsource.org/2012/10/05/whats-new-in-spring-integration-2-2-part-3-jpa-support/#comments</comments>
+		<pubDate>Fri, 05 Oct 2012 16:36:22 +0000</pubDate>
+		<dc:creator>Gunnar Hillert</dc:creator>
+				<category><![CDATA[Spring]]></category>
+
+		<guid isPermaLink="false">http://blog.springsource.org/?p=11627</guid>
+		<description><![CDATA[This is the third part in a series of blog posts highlighting some of the new features available in Spring Integration 2.2 following the recent release of Release Candidate 1. The first part described the new set of MongoDB adapters. In part two we highlighted the new extended support for synchronizing non-transactional resources with transactions. In  <a href="http://blog.springsource.org/2012/10/05/whats-new-in-spring-integration-2-2-part-3-jpa-support/"><em>Read more...</em></a>]]></description>
+		<wfw:commentRss>http://blog.springsource.org/2012/10/05/whats-new-in-spring-integration-2-2-part-3-jpa-support/feed/</wfw:commentRss>
+		<slash:comments>6</slash:comments>
+		</item>
+		<item>
+		<title>Spring Remains at the Forefront of Enterprise Java: BigData, NoSQL, and Cloud Portability</title>
+		<link>http://blog.springsource.org/2012/10/01/spring-remains-at-the-forefront-of-enterprise-java-bigdata-nosql-and-cloud-portability/</link>
+		<comments>http://blog.springsource.org/2012/10/01/spring-remains-at-the-forefront-of-enterprise-java-bigdata-nosql-and-cloud-portability/#comments</comments>
+		<pubDate>Mon, 01 Oct 2012 18:26:13 +0000</pubDate>
+		<dc:creator>Adrian Colyer</dc:creator>
+				<category><![CDATA[Spring]]></category>
+
+		<guid isPermaLink="false">http://blog.springsource.org/?p=11612</guid>
+		<description><![CDATA[It’s JavaOne time again and this year you’ll find sessions on how Spring works with Java SE to address Big Data, NoSQL, and enterprise integration challenges. We’ve always worked hard to ensure that Spring remains at the forefront of enterprise Java by providing timely support for emerging trends and technologies. The numbers suggest that our  <a href="http://blog.springsource.org/2012/10/01/spring-remains-at-the-forefront-of-enterprise-java-bigdata-nosql-and-cloud-portability/"><em>Read more...</em></a>]]></description>
+		<wfw:commentRss>http://blog.springsource.org/2012/10/01/spring-remains-at-the-forefront-of-enterprise-java-bigdata-nosql-and-cloud-portability/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>
