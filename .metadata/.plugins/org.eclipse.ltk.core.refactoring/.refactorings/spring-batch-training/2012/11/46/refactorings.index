@@ -26,3 +26,41 @@
 1352854483001	Copy elements
 1352854647912	Rename resource 'CustomerProcessorTest-context.xml'
 1352854657176	Rename type 'CustomerProcessorTest'
+1352934171317	Copy file
+1352934262671	Copy file
+1352934418197	Copy compilation unit
+1352934474187	Rename resource 'ibatis-customer-credit.xml'
+1352935360123	Copy elements
+1352935379514	Rename type 'FileItemDelimitedReaderTest'
+1352935386565	Rename type 'FileItemFixedLengthReaderTest'
+1352935392181	Rename type 'IbatisReaderTest'
+1352935397751	Rename type 'JdbcItemReaderTest'
+1352935403133	Rename type 'JpaItemReaderTest'
+1352935407610	Rename type 'MultiLineReader'
+1352935416549	Rename type 'ReaderTestHelper'
+1352935421915	Rename type 'StaxEventItemReaderTest'
+1352935428561	Rename resource 'FileItemDelimitedReaderTest-context.xml'
+1352935432819	Rename resource 'FileItemFixedLengthReaderTest-context.xml'
+1352935438030	Rename resource 'IbatisReaderTest-context.xml'
+1352935442663	Rename resource 'JdbcItemReaderTest-context.xml'
+1352935448388	Rename resource 'JpaItemReaderTest-context.xml'
+1352935454113	Rename resource 'MultiLineReaderTest-context.xml'
+1352935458981	Rename resource 'StaxEventItemReaderTest-context.xml'
+1352935728894	Rename method 'getExpected'
+1352936601960	Delete element
+1352936824518	Copy file
+1352937602817	Delete elements
+1352937643876	Delete element
+1352937657019	Rename resource 'IbatisReaderWriter-context.xml'
+1352939024571	Rename resource 'IbatisWriter-context.xml'
+1352939895527	Copy file
+1352940178137	Delete elements
+1352943345651	Delete element
+1352943351809	Delete element
+1352943359458	Delete element
+1352943374523	Delete elements
+1352943647990	Delete element
+1352943676545	Copy file
+1352943683393	Rename resource 'StaxEventItemReader-input.xml'
+1352943733582	Rename resource 'StaxEventItemReader-expected.xml'
+1352944021912	Copy compilation unit

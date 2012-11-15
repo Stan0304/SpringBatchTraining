@@ -1,0 +1,65 @@
+package sopra.springbatch.training1.part3.item.writer;
+
+import java.io.File;
+import java.util.List;
+
+import org.dbunit.Assertion;
+import org.dbunit.dataset.IDataSet;
+import org.dbunit.dataset.ITable;
+import org.dbunit.dataset.xml.FlatXmlDataSetBuilder;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.batch.item.NonTransientResourceException;
+import org.springframework.batch.item.ParseException;
+import org.springframework.batch.item.UnexpectedInputException;
+import org.springframework.batch.item.database.IbatisBatchItemWriter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
+
+import sopra.springbatch.training1.dto.CustomerDTO;
+
+/**
+ * Test la lecture depuis HSQL en jdbc
+ */
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration
+public class IbatisWriterTest extends WriterBDDTestHelper {
+
+	public IbatisWriterTest() {
+		super("Ibatis-Test");
+	}
+
+	@Autowired
+	IbatisBatchItemWriter<CustomerDTO> itemWriter;
+	
+	@Test
+	public void testRead() throws UnexpectedInputException, ParseException, NonTransientResourceException, Exception {
+		//A ECRIRE
+		List<CustomerDTO> toWrite = getToWrite();
+		for (CustomerDTO customerDTO : toWrite) {
+			customerDTO.setAge(25);
+		}
+		
+		//ECRITURE
+		write(toWrite);
+
+		// Fetch database data after executing your code
+        IDataSet databaseDataSet = getConnection().createDataSet();
+        ITable actualTable = databaseDataSet.getTable("CUSTOMER");
+
+        // Load expected data from an XML dataset
+        IDataSet expectedDataSet = new FlatXmlDataSetBuilder().build(new File("expectedDataSet.xml"));
+        ITable expectedTable = expectedDataSet.getTable("CUSTOMER");
+
+        // Assert actual database table match expected table
+        Assertion.assertEquals(expectedTable, actualTable);
+	}
+	
+	@Transactional
+	private void write(List<CustomerDTO> toWrite) {
+		itemWriter.write(toWrite);
+	}
+	
+}

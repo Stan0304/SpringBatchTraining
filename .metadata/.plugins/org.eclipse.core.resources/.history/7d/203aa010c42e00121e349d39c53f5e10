@@ -1,0 +1,73 @@
+package sopra.springbatch.training1.part3.item.writer;
+
+import java.util.LinkedList;
+import java.util.List;
+
+import junit.framework.Assert;
+
+import org.apache.log4j.Logger;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.batch.item.ExecutionContext;
+import org.springframework.batch.item.ItemStreamReader;
+import org.springframework.batch.item.NonTransientResourceException;
+import org.springframework.batch.item.ParseException;
+import org.springframework.batch.item.UnexpectedInputException;
+import org.springframework.batch.item.database.JpaItemWriter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
+
+import sopra.springbatch.training1.dto.CustomerDTO;
+import sopra.springbatch.training1.part1.item.reader.ReaderTestHelper;
+
+/**
+ * Test la lecture depuis HSQL en jdbc
+ */
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration
+public class JpaItemWriterTest extends WriterTestHelper {
+
+	@Autowired
+	JpaItemWriter<CustomerDTO> itemWriter;
+	
+	@Autowired
+	ItemStreamReader<CustomerDTO> itemReader;
+	
+	@Inject
+	  private EntityManager entityManager;
+	
+	private static Logger LOGGER = Logger.getLogger(ReaderTestHelper.class); 
+	
+	@Test
+	public void testRead() throws UnexpectedInputException, ParseException, NonTransientResourceException, Exception {
+		//A ECRIRE
+		List<CustomerDTO> toWrite = getToWrite();
+		for (CustomerDTO customerDTO : toWrite) {
+			customerDTO.setAge(25);
+		}
+		
+		//ECRITURE
+		write(toWrite);
+
+		// ACTUAL
+		List<CustomerDTO> actual = new LinkedList<CustomerDTO>();
+		itemReader.open(new ExecutionContext());
+		for ( CustomerDTO customer = itemReader.read() ; 
+				customer != null ; 
+				customer = itemReader.read() ){
+			actual.add(customer);
+			LOGGER.info(customer);
+		}
+		itemReader.close();
+		
+		// TEST le résultat
+		Assert.assertEquals(toWrite, actual);
+	}
+	
+	@Transactional
+	private void write(List<CustomerDTO> toWrite) throws Exception {
+		itemWriter.write(toWrite);
+	}
+}

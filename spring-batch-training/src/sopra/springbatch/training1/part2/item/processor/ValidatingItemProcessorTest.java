@@ -28,7 +28,7 @@ public class ValidatingItemProcessorTest extends ProcessorTestHelper {
 		CustomerDTO customerDTO5 = new CustomerDTO();
 		customerDTO5.setFirstName("fcustomer5");
 		customerDTO5.setAge(50);
-		customerDTO5.setGender('M');
+		customerDTO5.setGender("M");
 		itemProcessor.process(customerDTO5);
 	}
 	
@@ -39,7 +39,7 @@ public class ValidatingItemProcessorTest extends ProcessorTestHelper {
 		customerDTO6.setFirstName("fcustomer6");
 		customerDTO6.setLastName("lcustomer6");
 		customerDTO6.setAge(1060);
-		customerDTO6.setGender('F');
+		customerDTO6.setGender("F");
 		itemProcessor.process(customerDTO6);
 	}
 

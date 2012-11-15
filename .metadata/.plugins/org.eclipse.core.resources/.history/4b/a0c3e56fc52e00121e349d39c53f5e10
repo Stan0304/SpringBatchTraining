@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<bean id="itemReader" class="org.springframework.batch.item.xml.StaxEventItemReader">
+		<property name="fragmentRootElementName" value="customer" />
+		<property name="resource" value="classpath:sopra/springbatch/training1/part1/data/StaxEventItemReader-input.xml" />
+		<property name="unmarshaller" ref="customerMarshaller" />
+	</bean>
+	
+	<bean id="itemWriter" class="org.springframework.batch.item.xml.StaxEventItemWriter">
+		<property name="resource" ref="file:./src/sopra/springbatch/training1/part3/data/StaxEventItemWriter-output.xml" />
+		<property name="marshaller" ref="customerMarshaller" />
+		<property name="rootTagName" value="customers" />
+		<property name="overwriteOutput" value="true" />
+	</bean>
+	
+	<bean id="customerMarshaller" class="org.springframework.oxm.xstream.XStreamMarshaller">
+		<property name="aliases">
+			<util:map id="aliases">
+				<entry key="customer" value="sopra.springbatch.training1.dto.CustomerDTO" />
+				<entry key="FirstName" value="java.lang.String" />
+				<entry key="LastName" value="java.lang.String" />
+				<entry key="Age" value="java.lang.Integer" />
+				<entry key="Gender" value="java.lang.Character" />
+			</util:map>
+		</property>
+	</bean>
+	
+</beans>

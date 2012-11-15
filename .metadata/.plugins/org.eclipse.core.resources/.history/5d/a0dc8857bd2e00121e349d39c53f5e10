@@ -1,0 +1,74 @@
+package sopra.springbatch.training1.part3.item.writer;
+
+import java.io.FileInputStream;
+import java.util.LinkedList;
+import java.util.List;
+
+import org.dbunit.DBTestCase;
+import org.dbunit.PropertiesBasedJdbcDatabaseTester;
+import org.dbunit.dataset.IDataSet;
+import org.dbunit.dataset.xml.FlatXmlDataSetBuilder;
+import org.dbunit.operation.DatabaseOperation;
+
+import sopra.springbatch.training1.dto.CustomerDTO;
+
+public class WriterBDDTestHelper extends DBTestCase {
+
+	public WriterBDDTestHelper(String name)
+    {
+        super( name );
+        System.setProperty( PropertiesBasedJdbcDatabaseTester.DBUNIT_DRIVER_CLASS, "org.hsqldb.jdbcDriver" );
+        System.setProperty( PropertiesBasedJdbcDatabaseTester.DBUNIT_CONNECTION_URL, "jdbc:hsqldb:mem:testdb;sql.enforce_strict_size=true" );
+        System.setProperty( PropertiesBasedJdbcDatabaseTester.DBUNIT_USERNAME, "sa" );
+        System.setProperty( PropertiesBasedJdbcDatabaseTester.DBUNIT_PASSWORD, "" );
+        // System.setProperty( PropertiesBasedJdbcDatabaseTester.DBUNIT_SCHEMA, "" );
+    }
+	 
+	@Override
+	protected IDataSet getDataSet() throws Exception {
+		return new FlatXmlDataSetBuilder().build(new FileInputStream("src/sopra/springbatch/training1/part3/data/dataset.xml"));
+	}
+	
+	protected DatabaseOperation getSetUpOperation() throws Exception
+    {
+        return DatabaseOperation.REFRESH;
+    }
+
+    protected DatabaseOperation getTearDownOperation() throws Exception
+    {
+        return DatabaseOperation.NONE;
+    }
+    
+	public List<CustomerDTO> getToWrite(){
+		List<CustomerDTO> expected = new LinkedList<CustomerDTO>();
+		CustomerDTO customer1 = new CustomerDTO();
+		customer1.setFirstName("fcustomer1");
+		customer1.setLastName("lcustomer1");
+		customer1.setAge(10);
+		customer1.setGender("M");
+		CustomerDTO customer2 = new CustomerDTO();
+		customer2.setFirstName("fcustomer2");
+		customer2.setLastName("lcustomer2");
+		customer2.setAge(20);
+		customer2.setGender("F");
+		CustomerDTO customer3 = new CustomerDTO();
+		customer3.setFirstName("fcustomer3");
+		customer3.setLastName("lcustomer3");
+		customer3.setAge(30);
+		customer3.setGender("F");
+		CustomerDTO customer4 = new CustomerDTO();
+		customer4.setFirstName("fcustomer4");
+		customer4.setLastName("lcustomer4");
+		customer4.setAge(40);
+		customer4.setGender("M");
+		
+		// Construction de la liste
+		expected.add(customer1);
+		expected.add(customer2);
+		expected.add(customer3);
+		expected.add(customer4);
+		
+		return expected;
+	}
+	
+}

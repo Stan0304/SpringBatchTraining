@@ -1,0 +1,33 @@
+<!DOCTYPE dataset SYSTEM "dataset.dtd">
+<dataset>
+    <table name="CUSTOMER">
+        <column>FIRSTNAME</column>
+        <column>LASTNAME</column>
+        <column>AGE</column>
+        <column>GENDER</column>
+        <row>
+            <value>fcustomer1</value>
+            <value>lcustomer1</value>
+            <value>10</value>
+            <value>M</value>
+        </row>
+        <row>
+            <value>fcustomer1</value>
+            <value>lcustomer1</value>
+            <value>10</value>
+            <value>M</value>
+        </row>
+		<row>
+            <value>fcustomer1</value>
+            <value>lcustomer1</value>
+            <value>10</value>
+            <value>M</value>
+        </row>
+        <row>
+            <value>fcustomer1</value>
+            <value>lcustomer1</value>
+            <value>10</value>
+            <value>M</value>
+        </row>
+    </table>
+</dataset>

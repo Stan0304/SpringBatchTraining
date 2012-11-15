@@ -1,0 +1,6 @@
+package sopra.springbatch.training1.part3.item.writer;
+
+public class WriterBDDTestHelper {
+
+	public Connection
+}

@@ -1,0 +1,56 @@
+package sopra.springbatch.training1.part3.item.writer;
+
+import java.util.List;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.batch.item.ExecutionContext;
+import org.springframework.batch.item.ItemStreamReader;
+import org.springframework.batch.item.NonTransientResourceException;
+import org.springframework.batch.item.ParseException;
+import org.springframework.batch.item.UnexpectedInputException;
+import org.springframework.batch.item.database.IbatisBatchItemWriter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
+
+import sopra.springbatch.training1.dto.CustomerDTO;
+
+/**
+ * Test la lecture depuis HSQL en jdbc
+ */
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration
+public class IbatisWriterTest extends WriterBDDTestHelper {
+
+	@Autowired
+	IbatisBatchItemWriter<CustomerDTO> itemWriter;
+	
+	@Autowired
+	ItemStreamReader<CustomerDTO> itemReader;
+	
+	@Test
+	public void testRead() throws UnexpectedInputException, ParseException, NonTransientResourceException, Exception {
+		//A ECRIRE
+		List<CustomerDTO> toWrite = getToWrite();
+		for (CustomerDTO customerDTO : toWrite) {
+			customerDTO.setAge(25);
+		}
+		
+		//ECRITURE
+		write(toWrite);
+
+		// Lecture
+		itemReader.open(new ExecutionContext());
+		
+		
+		itemReader.close();
+	}
+	
+	@Transactional
+	private void write(List<CustomerDTO> toWrite) {
+		itemWriter.write(toWrite);
+	}
+	
+}

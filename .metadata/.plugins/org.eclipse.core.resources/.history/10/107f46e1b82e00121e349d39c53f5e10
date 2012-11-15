@@ -1,0 +1,8 @@
+package sopra.springbatch.training1.part3.item.writer;
+
+import org.dbunit.DBTestCase;
+
+public class WriterBDDTestHelper extends DBTestCase {
+	
+	
+}

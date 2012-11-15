@@ -3,7 +3,6 @@ package sopra.springbatch.training1.part1.item.reader.rowmapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import org.apache.commons.lang.StringUtils;
 import org.springframework.jdbc.core.RowMapper;
 
 import sopra.springbatch.training1.dto.CustomerDTO;
@@ -29,9 +28,7 @@ public class CustomerRowMapper implements RowMapper {
 		customerDTO.setFirstName(rs.getString(FIRSTNAME_COLUMN));
 		customerDTO.setLastName(rs.getString(LASTNAME_COLUMN));
 		customerDTO.setAge(rs.getInt(AGE_COLUMN));
-		if (StringUtils.isNotBlank(rs.getString(GENDER_COLUMN))){
-			customerDTO.setGender(rs.getString(GENDER_COLUMN).charAt(0));
-		}
+		customerDTO.setGender(rs.getString(GENDER_COLUMN));
 		
 		return customerDTO;
 	}

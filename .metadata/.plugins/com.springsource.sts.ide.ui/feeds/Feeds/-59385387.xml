@@ -6,6 +6,51 @@
  <description>Welcome to the home of Spring, the leading platform to build and run enterprise Java applications. Led and sustained by SpringSource, Spring delivers significant benefits for many projects, increasing development productivity and runtime performance while improving test coverage and application quality.</description>
  <language>en</language>
 <item>
+ <title>This Week in Spring - 13 November, 2012</title>
+ <link>http://www.springsource.org/node/3737</link>
+ <description>  
+&lt;p&gt; 
+ Welcome back to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! I started this week back in 
+ the lovely Sofia, Bulgaria for the  &lt;a href=&quot;http://opentour.cloudfoundry.com/2012/sofia&quot; target=&quot;_blank&quot;&gt;Cloud Foundry Open Tour&lt;/a&gt; event, talking to 
+a packed audience about building Spring applications on Cloud Foundry. Now, I&amp;#39;m in Antwerp, Belgium, at the &lt;a href=&quot;http://www.devoxx.com&quot; target=&quot;_blank&quot;&gt;Devoxx&lt;/a&gt;  conference where I&amp;#39;ll present on what&amp;#39;s new in Spring 3.2, Cloud Foundry and   more. 
+ If you&amp;#39;re here, I invite you to come visit the SpringSource booth and see some of the talks on Spring that I - and others - will be giving. 
+&lt;/p&gt;
+&lt;ol&gt; 
+		&lt;li&gt;  
+			
+			Roy Clarkson has announced not one, but two releases of Spring  Mobile this week! 
+Spring Android  			&lt;a href=&quot;http://www.springsource.org/spring-mobile/news/1.0.1-released&quot; target=&quot;_blank&quot;&gt;1.0.1 has been released&lt;/a&gt;. This release includes a change to support BlackBerry 10 mobile devices. BlackBerry 10 mobile devices are now resolved as a mobile device when using the &lt;code&gt;LiteDeviceResolver&lt;/code&gt;. 
+	 Then, he released the    
+&lt;a href=&quot;http://www.springsource.org/spring-mobile/news/1.1.0.m1-released&quot; target=&quot;_blank&quot;&gt;1.1.0.M1 release&lt;/a&gt;, which folds in the 1.0.1 support as well as tablet support in site preference handling and site switching, support for Java-based container configuration, and support for servlet based configurations.
+				 &lt;/li&gt;
+				&lt;li&gt;Thomas Risberg has announced the GA release of &lt;a href=&quot;http://www.springsource.org/node/3734&quot; target=&quot;_blank&quot;&gt; Spring Data JDBC extensions with QueryDSL and Advanced Oracle support&lt;/a&gt;. &lt;/li&gt;
+						&lt;li&gt;  There&amp;#39;s a lot of interesting news in the testing space this week! First up,   Rossen Stoyanchev   
+							 posted a nice blog on the &lt;a href=&quot;http://blog.springsource.org/2012/11/12/spring-framework-3-2-rc1-spring-mvc-test-framework&quot; target=&quot;_blank&quot;&gt; Spring MVC Test framework for 3.2 RC1&lt;/a&gt;. 
+							Then,  Sam Brannen posted a great blog in &lt;a href=&quot;http://blog.springsource.org/2012/11/07/spring-framework-3-2-rc1-new-testing-features&quot; target=&quot;_blank&quot;&gt; the new testing features in the upcoming Spring 3.2 core (now available as part of 3.2 RC1).&lt;/a&gt;  
+      &lt;/li&gt; 
+&lt;li&gt;This isn&amp;#39;t particularly &lt;em&gt;new&lt;/em&gt;, but it&amp;#39;s worth reiterating: &lt;a href=&quot;http://blog.springsource.org/2012/11/05/spring-framework-3-2-rc1-released/&quot; target=&quot;_blank&quot;&gt;Spring Framework 3.2 RC1 has been released&lt;/a&gt;! Take this opportunity to check it against your application, and to start learning about some of the new features.  
+																
+ 
+ 
+	&lt;li&gt; 
+	 David Turanski has put together a nice post on using the &lt;a href=&quot;http://blog.springsource.org/2012/11/06/a-groovy-dsl-for-spring-integration/&quot; target=&quot;_blank&quot;&gt;new Spring Integration Groovy DSL&lt;/a&gt;. Talk about a one-two punch combo! 
+	&lt;/li&gt;
+	 &lt;li&gt; Today, &lt;a href=&quot;http://cloudfoundry.com&quot; target=&quot;_blank&quot;&gt; Cloud Foundry&lt;/a&gt; announced a definition of Cloud Foundry Core, and launched &lt;a href=&quot;http://core.cloudfoundry.org&quot; target=&quot;_blank&quot;&gt;core.cloudfoundry.org&lt;/a&gt;, which provides lots of neat utilities. 
+		Looking at the various Cloud Foundry implementations &lt;a href=&quot;https://core.cloudfoundry.org/listings&quot; target=&quot;_blank&quot;&gt;and want to comparison shop&lt;/a&gt;? Or, would you like to  request that a certain  &lt;a href=&quot;https://core.cloudfoundry.org/wishlist&quot; target=&quot;_blank&quot;&gt;framework or service be added to Cloud Foundry&lt;/a&gt;?  
+ 
+		 &lt;/li&gt; &lt;li&gt;  Viral Patel has put together a nice &lt;a href=&quot;http://viralpatel.net/blogs/spring-mvc-multiple-file-upload-example/&quot; target=&quot;_blank&quot;&gt;post on handling multiple file uploads with Spring MVC&lt;/a&gt;. 
+		&lt;/li&gt; 
+		&lt;li&gt; Erwin Vervaet  put together a great blog &lt;a href=&quot;http://ev9d9.blogspot.be/2012/11/getting-started-with-spring-shell.html&quot; target=&quot;_blank&quot;&gt;post introducing the nascent Spring Shell project&lt;/a&gt;. Nicely done!  &lt;/li&gt;
+		&lt;li&gt; Santosh Rangarajan  has done a nice job &lt;a href=&quot;http://abstractlayers.com/2012/11/10/concepts/&quot; target=&quot;_blank&quot;&gt;introducing the concepts of Spring Security 3.1&lt;/a&gt; &lt;/li&gt;
+	 
+&lt;/li&gt;&lt;/ol&gt; </description>
+ <comments>http://www.springsource.org/node/3737#comments</comments>
+ <category domain="http://www.springsource.org/taxonomy/term/4">News and Announcements</category>
+ <pubDate>Wed, 14 Nov 2012 09:42:33 +0000</pubDate>
+ <dc:creator>Josh Long</dc:creator>
+ <guid isPermaLink="false">3737 at http://www.springsource.org</guid>
+</item>
+<item>
  <title>Spring Mobile 1.1.0.M1 Released</title>
  <link>http://www.springsource.org/spring-mobile/news/1.1.0.m1-released</link>
  <description>&lt;p&gt;Dear Spring Community,&lt;/p&gt;
@@ -207,19 +252,6 @@ VMware vFabric Hyperic is a a web infrastructure management and monitoring softw
  <pubDate>Wed, 31 Oct 2012 21:19:38 +0000</pubDate>
  <dc:creator>Chris Beams</dc:creator>
  <guid isPermaLink="false">3720 at http://www.springsource.org</guid>
-</item>
-<item>
- <title>First milestone of Spring Data Solr released</title>
- <link>http://www.springsource.org/node/3719</link>
- <description>&lt;p&gt;I am pleased to announce the availablity of the first milestone of a Spring Data Solr project. It&#039;s the first community-driven Spring Data module lead by &lt;a href=&quot;https://twitter.com/stroblchristoph&quot;&gt;Christoph Strobl&lt;/a&gt;. It&#039;s essentially an implementation of the Spring Data repository API to access Solr stores and provides the same programming model you are already used to from Spring Data JPA, MongoDB, Neo4j and Gemfire. Beyond that Spring Data Solr provides a lower level &lt;code&gt;SolrTemplate&lt;/code&gt; as well as abstractions to easily bootstrap an embedded Solr server.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://repo.springsource.org/libs-milestone/org/springframework/data/spring-data-solr/1.0.0.M1/&quot;&gt;Maven artifacts&lt;/a&gt; | &lt;a href=&quot;http://static.springsource.org/spring-data/solr/docs/1.0.0.M1/api/&quot;&gt;JavaDocs&lt;/a&gt; | &lt;a href=&quot;http://static.springsource.org/spring-data/solr/docs/1.0.0.M1/reference/html/&quot;&gt;Reference Documentation&lt;/a&gt; | &lt;a href=&quot;http://static.springsource.org/spring-data/solr/docs/1.0.0.M1/changelog.txt&quot;&gt;Changelog&lt;/a&gt; | &lt;a href=&quot;https://jira.springsource.org/browse/DATASOLR&quot;&gt;JIRA&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;We looking forward to community-driven Spring Data module implementations for other stores. Please get in touch with us through the forums in case you&#039;d like to see a particular store supported and can commit to actively maintaining the project.&lt;/p&gt;
-</description>
- <comments>http://www.springsource.org/node/3719#comments</comments>
- <category domain="http://www.springsource.org/taxonomy/term/4">News and Announcements</category>
- <pubDate>Wed, 31 Oct 2012 13:03:21 +0000</pubDate>
- <dc:creator>ogierke</dc:creator>
- <guid isPermaLink="false">3719 at http://www.springsource.org</guid>
 </item>
 </channel>
 </rss>

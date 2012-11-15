@@ -1,0 +1,15 @@
+package sopra.springbatch.training1.part3.item.writer;
+
+import org.dbunit.DBTestCase;
+import org.dbunit.dataset.IDataSet;
+
+public class WriterBDDTestHelper extends DBTestCase {
+
+	@Override
+	protected IDataSet getDataSet() throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+
+	<bean id="itemWriter" class="org.springframework.batch.item.file.FlatFileItemWriter" scope="step">
+		<property name="resource" value="classpath:sopra/springbatch/training1/part1/data/FileItemDelimitedWriter-output.txt" />
+		<property name="lineAggregator">
+			<bean class="org.springframework.batch.item.file.transform.DelimitedLineAggregator">
+				<property name="delimiter" value=";"/>
+				<property name="fieldExtractor">
+					<bean class="org.springframework.batch.item.file.transform.BeanWrapperFieldExtractor">
+						<property name="names" value="name,credit"/>					
+					</bean>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+    <bean id="itemReader" class="org.springframework.batch.item.file.FlatFileItemReader">
+    	<property name="resource"
+			value="classpath:sopra/springbatch/training1/part1/data/FileItemDelimitedReader-input.txt" />
+		<property name="lineMapper">
+			<bean class="org.springframework.batch.item.file.mapping.DefaultLineMapper">
+				<property name="lineTokenizer" ref="customerTokenizer" />
+				<property name="fieldSetMapper" ref="customerFieldSetMapper" />
+			</bean>
+		</property>
+    </bean>
+
+	<bean id="customerTokenizer" class="org.springframework.batch.item.file.transform.DelimitedLineTokenizer">
+		<property name="names" value="FirstName, LastName, Age, Gender" />
+		<property name="delimiter" value=";"/>
+	</bean>
+	
+	<bean id="customerFieldSetMapper" class="org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper">
+		<property name="prototypeBeanName" value="customer" />
+	</bean>
+		
+	<bean id="customer" class="sopra.springbatch.training1.dto.CustomerDTO" scope="prototype" />
+	
+</beans>

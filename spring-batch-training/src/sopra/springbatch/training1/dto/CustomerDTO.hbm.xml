@@ -4,14 +4,17 @@
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-	<class name="org.springframework.batch.sample.domain.trade.CustomerCredit"
+	<class name="sopra.springbatch.training1.dto.CustomerDTO"
 		table="CUSTOMER">
 		<id name="id">
 			<!-- To make the job fail on flush we need assigned IDs -->
 			<generator class="assigned" />
 		</id>
-		<property name="name" />
-		<property name="credit" />
+		<property name="version" />
+		<property name="firstName" />
+		<property name="lastName" />
+		<property name="age" />
+		<property name="gender" />
 	</class>
 
 </hibernate-mapping>

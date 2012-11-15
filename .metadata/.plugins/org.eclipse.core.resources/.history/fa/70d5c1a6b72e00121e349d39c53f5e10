@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="Customer">
+
+  <resultMap id="result" class="sopra.springbatch.training1.dto.CustomerDTO">
+    <result property="firstName" column="FIRSTNAME" />
+    <result property="lastName" column="LASTNAME" />
+    <result property="age" column="AGE" />
+    <result property="gender" column="GENDER" />
+  </resultMap>
+
+  <select id="getAllCustomerIds" resultClass="int">
+    select ID from CUSTOMER
+  </select>
+  
+  <select id="getAllCustomer" resultMap="result">
+ 	select ID, VERSION, FIRSTNAME, LASTNAME, AGE, GENDER from CUSTOMER 
+  </select>
+  
+  <update id="updateAge" parameterClass="sopra.springbatch.training1.dto.CustomerDTO" >
+  	update CUSTOMER set AGE = #age# where NAME = #id#
+  </update>
+
+</sqlMap>

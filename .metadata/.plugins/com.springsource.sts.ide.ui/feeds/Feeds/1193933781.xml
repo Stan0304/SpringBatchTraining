@@ -31,7 +31,7 @@
 		<guid isPermaLink="false">http://blog.springsource.org/?p=12053</guid>
 		<description><![CDATA[Last week Juergen Hoeller announced the release of Spring Framework 3.2 RC1 and Sam Brannen discussed exciting additions in its spring-test module such as support for WebApplicationContext&#039;s and upcoming plans for loading a hierarchy of contexts. Today I will continue this subject and describe another exciting spring-test addition. In 3.2 RC1 we&#039;ve added first class  <a href="http://blog.springsource.org/2012/11/12/spring-framework-3-2-rc1-spring-mvc-test-framework/"><em>Read more...</em></a>]]></description>
 		<wfw:commentRss>http://blog.springsource.org/2012/11/12/spring-framework-3-2-rc1-spring-mvc-test-framework/feed/</wfw:commentRss>
-		<slash:comments>3</slash:comments>
+		<slash:comments>4</slash:comments>
 		</item>
 		<item>
 		<title>Spring Framework 3.2 RC1: New Testing Features</title>

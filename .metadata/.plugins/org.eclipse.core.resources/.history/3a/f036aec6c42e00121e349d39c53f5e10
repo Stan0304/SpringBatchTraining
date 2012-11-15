@@ -1,0 +1,14 @@
+package sopra.springbatch.training1.part3.item.writer;
+
+import org.junit.runner.RunWith;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+/**
+ * Test la lecture de fichier plat avec champs à taille fixe
+ */
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration
+public class MultiLineReaderTest extends WriterTestHelper {
+
+}

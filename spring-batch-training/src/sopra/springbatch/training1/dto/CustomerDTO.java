@@ -24,7 +24,7 @@ public class CustomerDTO {
 	/** Age */
 	private Integer age;
 	/** Sexe */
-	private Character gender;
+	private String gender;
 	/**
 	 * @return the id
 	 */
@@ -88,13 +88,13 @@ public class CustomerDTO {
 	/**
 	 * @return the gender
 	 */
-	public Character getGender() {
+	public String getGender() {
 		return gender;
 	}
 	/**
 	 * @param gender the gender to set
 	 */
-	public void setGender(Character gender) {
+	public void setGender(String gender) {
 		this.gender = gender;
 	}
 	/* (non-Javadoc)

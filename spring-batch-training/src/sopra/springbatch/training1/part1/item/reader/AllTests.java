@@ -7,7 +7,7 @@ import org.junit.runners.Suite.SuiteClasses;
 @RunWith(Suite.class)
 @SuiteClasses({ FileItemDelimitedReaderTest.class,
 		FileItemFixedLengthReaderTest.class, JdbcItemReaderTest.class,
-		JpaItemReaderTest.class, MultiLineReaderTest.class, 
+		JpaItemReaderTest.class, MultiLineReaderTest.class, IbatisReaderTest.class,
 		StaxEventItemReaderTest.class })
 public class AllTests {
 

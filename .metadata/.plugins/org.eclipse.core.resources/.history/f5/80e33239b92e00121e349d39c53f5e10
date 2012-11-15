@@ -1,0 +1,18 @@
+<!DOCTYPE dataset SYSTEM "dataset.dtd">
+<dataset>
+    <table name="CUSTOMER">
+        <column>COL0</column>
+        <column>COL1</column>
+        <column>COL2</column>
+        <row>
+            <value>row 0 col 0</value>
+            <value>row 0 col 1</value>
+            <value>row 0 col 2</value>
+        </row>
+        <row>
+            <null/>
+            <value>row 1 col 1</value>
+            <null/>
+        </row>
+    </table>
+</dataset>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<bean id="itemWriter" class="org.springframework.batch.item.file.FlatFileItemWriter" scope="step">
+		<property name="resource" value="file:./src/sopra/springbatch/training1/part3/data/FileItemDelimitedWriter-output.txt" />
+		<property name="lineAggregator">
+			<bean
+				class="org.springframework.batch.item.file.transform.FormatterLineAggregator">
+				<property name="fieldExtractor">
+					<bean
+						class="org.springframework.batch.item.file.transform.BeanWrapperFieldExtractor">
+						<property name="names" value="name,credit" />
+					</bean>
+				</property>
+				<property name="format" value="%-9s%-2.0f" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="itemReader" class="org.springframework.batch.item.file.FlatFileItemReader">
+    	<property name="resource"
+			value="classpath:sopra/springbatch/training1/part1/data/FileItemFixedLengthReader-input.txt" />
+		<property name="lineMapper">
+			<bean class="org.springframework.batch.item.file.mapping.DefaultLineMapper">
+				<property name="lineTokenizer" ref="customerTokenizer" />
+				<property name="fieldSetMapper" ref="customerFieldSetMapper" />
+			</bean>
+		</property>
+    </bean>
+
+	<bean id="customerTokenizer" class="org.springframework.batch.item.file.transform.FixedLengthTokenizer">
+		<property name="names" value="FirstName, LastName, Age, Gender" />
+		<property name="columns" value="1-20,21-40,41-45,46" />
+	</bean>
+	
+	<bean id="customerFieldSetMapper" class="org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper">
+		<property name="targetType" value="sopra.springbatch.training1.dto.CustomerDTO" />
+	</bean>
+		
+	<bean id="customEditorConfigurer" class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+	    <property name="customEditors">
+	      <map>
+	        <entry key="org.springframework.batch.item.file.transform.Range[]">
+	          <bean class="org.springframework.batch.item.file.transform.RangeArrayPropertyEditor" />
+	        </entry>
+	      </map>
+	    </property>
+	 </bean>
+</beans>
